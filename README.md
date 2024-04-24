@@ -10,14 +10,14 @@
 <br>
 
 **Table of Contents**
-- [Introduction](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-introduction)
-- [Source Data](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-data-scraping)
-- [Data Integration](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-data-integration)
-- [Data Preprocessing](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-data-preprocessing)
-	- [Data Cleaning](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-data-preprocessing)
-      - [Missing Values](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
-      - [Data Anomaly](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#duplicated-values)
-- [Exploratory Data Analysis](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-exploratory-data-analysis)
+- [Introduction](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#-introduction)
+- [Source Data](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#-source-data)
+- [Data Integration](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#-data-integration)
+- [Data Preprocessing](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#-data-preprocessing)
+	- [Data Cleaning](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#-data-preprocessing)
+      - [Missing Values](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#missing-values)
+      - [Data Anomaly](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#data-anomaly)
+- [Exploratory Data Analysis](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/README.md#data-anomaly)
   - [Hotel Performance Metrics](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#player-attributes)
       - [Total Booking per Hotel Type](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
       - [Booking per Month](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
@@ -29,6 +29,8 @@
       - [Cancellation per Distribution Channel](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
       - [Travel Agent/Tour Operator](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
 - [Conclusion & Business Insight](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-predictive-modeling)
+- [Dashboard](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-predictive-modeling)
+
 <br>
 
 ---
@@ -113,127 +115,177 @@ In this section, we will filter out abnormal data from the dataset related to ho
 
 ## 📌 **Exploratory Data Analysis**
 
-The Exploratory Data Analysis (EDA) will focus on analyzing all available data and information related to winning the NBA MVP award. It will primarily be divided into:
-- Player Attributes
-- Player Basic Stats
-- Player Advanced Stats
-- Teams Performance
+The exploratory data analysis (EDA) will be divided into two main parts, each focusing on distinct aspects of the dataset:
+- Hotel Performance
+	- Total Booking per Hotel Type
+   	- Booking per Month
+   	- ADR per Month
+- Hotel Reservation Cancellation
+	- Cancellation per Month
+   	- Cancellation per Stay Duration
+   	- Cancellation per Lead Time
+   	- Cancellation per Distribution Channel
+   	- Travel Agent/Tour Operator
 
 <br>
 
-### Player Attributes
+### Total Booking per Hotel Type
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/vote_share.png"> </kbd> <br>
-</p>
-
-<p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/position.png"> </kbd> <br>
+    <kbd> <img width="500" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/hotelbookpct.png"> </kbd> <br>
 </p>
 
 **Key Points:**
-- MPV winners consistently receive high vote shares, often close to or exceeding 90%, indicating strong support from NBA voters for their MVP candidacy.
-- Despite the subjective nature of MVP voting, the consistently high vote shares for winners suggest a certain level of consensus among voters regarding the most deserving candidate. However, there may still be biases or factors influencing the voting process, such as media coverage, team success, or individual narratives.
-- While power forwards and point guards have historically dominated MVP awards from 2001 to 2023, the last three MVP winners have been centers. Centers are traditionally known for their defensive presence, rebounding, and rim protection, but recent MVP-winning centers also excel offensively, showcasing versatility in their skill sets.
+- **City hotels** are more popular among guests, as they have a higher percentage of reservations compared to **resort hotels**.
+- This could suggest that there is a higher demand for accommodations in urban areas compared to resort destinations.
 
 <br>
 
-### Player Basic Stats
+### Booking per Month
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/basic%20stats.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/bookpermonth.png"> </kbd> <br>
 </p>
 
 **Key Points:**
-- MVP winners exhibit superior performance across various statistical categories compared to both MVP vote-getters and all players.
-- **Statistical excellence, particularly in scoring, shooting efficiency, playmaking, and defensive contributions, appears to be a common trait among MVP winners.**
+- **City hotels** always have **higher monthly booking** counts compared to **resort hotels**.
+- Both types of hotels experience fluctuations in booking counts throughout the year, with peaks during holiday season for locals and summer months for tourists.
+- **City hotels** see a notable increase in bookings during the holiday season / summer months, whereas **resort hotels** show more consistent booking counts throughout the year.
 
 <br>
 
-### Player Advanced Stats
+### ADR per Month
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/adv%20stats.png"> </kbd> <br>
-</p>
-
-<p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/bpm.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/adrpermonth.png"> </kbd> <br>
 </p>
 
 **Key Points:**
-- Advanced/analytical statistics provide a more nuanced understanding of player performance, focusing on efficiency, usage, and impact on both ends of the court.
-- MVP winners consistently demonstrate superior performance across various advanced metrics compared to both MVP vote-getters and all players, emphasizing their overall impact and contribution to their teams' success.
-- It's undeniable that OBPM can provide more insight into a player's value than DBPM. A player can receive MVP votes solely based on their offensive performance, even if they have little defensive impact while on the court. However, it's worth noting that many MVP winners also have high DBPM, which sets them apart from other vote-getters.
+- **City hotels** generally command **higher average daily rates (ADR)** compared to **resort hotels** across all months.
+- Monthly ADR tends to peak during the holiday season for both **city and resort hotels**.
 
 <br>
 
-### Team Stats
+### Cancellation per Month
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/team%20stats.png"> </kbd> <br>
-</p>
-
-<p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/team%20win%20vs%20win%20share.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/cancelpermonth.png"> </kbd> <br>
 </p>
 
 **Key Points:**
-- Teams with MVP-caliber players tend to outperform their counterparts in terms of offensive and defensive efficiency, margin of victory, win-loss records, and overall and conference standings.
-- Higher overall and conference standings among MVP-winning teams reflect their ability to elevate team performance and competitiveness, positioning them as key leaders in guiding their teams to success within their respective conferences and the league as a whole.
+- **City Hotel** generally exhibits **higher cancellation rates** compared to **Resort Hotel** across all months.
+- **City Hotel's** cancellation rates range from 37% to 47%, while **Resort Hotel's** cancellation rates range from 15% to 34%.
+- Both hotel types experience fluctuations in cancellation rates throughout the year, with peak months typically occurring during the holiday season or summer season (June, July, August).
 
 <br>
 
-## 📌 **Predictive Modeling**
-
-To predict the NBA MVP from this dataset, three models will be compared: Random Forest, XGBoost, and Extra Trees Regressor. The best-performing model will then be used for predicting and tracking the current season's NBA MVP. Given the imbalanced nature of the target variable, which often includes many zero values, the Root Mean Squared Logarithmic Error (RMSLE) will be used as the scoring metric.
-
-<br>
-
-### Modeling
-
-Table 2 — Model Scoring
- **Model** | **RMSLE** | **R-squared** | **Best Hyperparameters** |
------------------|--------------|--------------|--------------|
-RandomForestRegressor | 0.2333 | 0.9063 | 'max_depth': 8, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 6, 'n_estimators': 100
-ExtraTreesRegressor | 0.2408 | 0.9087 | 'max_depth': 7, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 6, 'n_estimators': 100
-XGBRegressor | 0.155 | 0.9705 | 'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.05, 'max_depth': 6, 'min_child_weight': 3, 'n_estimators': 63, 'reg_alpha': 0.5, 'reg_lambda': 1.0, 'subsample': 0.9
-<br>
-
-### Model Prediction
+### Cancellation per Stay Duration
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/model%20prediction.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/cancelstay.png"> </kbd> <br>
 </p>
 
 **Key Points:**
-- Based on the NBA MVP predictions for 2001-2023 winners, the XGBoost model had the best performance, achieving the highest accuracy with 22 correct predictions out of 23 winners. The Extra Trees model made 19 correct predictions, while the Random Forest model made 18 correct predictions.
-- Interestingly, all three models incorrectly predicted the MVP for the 2017 season, selecting James Harden instead of Russell Westbrook.
-- Moreover, all three models predict Nikola Jokić as the MVP for the current 2024 season (as of March), with a high predicted vote share.
-- Overall, the models demonstrated high accuracy in predicting the NBA MVP, with XGBoost leading the pack with an accuracy ratio of 22 out of 23 (95.65%).
+- Across both **City Hotel** and **Resort Hotel**, **shorter stay durations generally exhibit lower cancellation rates**.
+- 1-day stays have the lowest cancellation rate.
+- Both hotels show variability in cancellation rates across different stay durations.
+- Longer stay durations, such as 2 weeks and onwards, tend to have higher cancellation rates compared to shorter durations.
+
+<br>
+
+### Cancellation per Lead Time
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/cancellead.png"> </kbd> <br>
+</p>
+
+**Key Points:**
+- **City Hotel has a higher cancellation ratio compared to the Resort Hotel across all lead time groups**.
+- As lead time increases, the percentage of cancellations generally increases for both hotel types. For instance, both hotels show significantly lower cancellation rates for reservations made 1 Day in advance compared to longer lead times.
+- **Lead time plays a crucial role in reservation cancellations, with longer lead times correlating with higher cancellation rates.**
+
+<br>
+
+### Cancellation per Distribution Channel
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/canceldist.png"> </kbd> <br>
+</p>
+
+**Key Points:**
+- **TA/TO (Travel Agent/Tour Operator) is the dominant distribution channel for both City Hotel and Resort Hotel**, with the highest number of reservations and cancellations for both.
+- Direct bookings have the lowest cancellation rates for both hotels, with City Hotel at 18.36% and Resort Hotel at 17.03%.
+- Both City Hotel and Resort Hotel should fostering a collaborative and communicative relationship with travel agents, so they can work together more effectively to minimize cancellations.
+
+<br>
+
+### Travel Agent/Tour Operator
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/agent1.png"> </kbd> <br>
+</p>
+
+**Key Points:**
+- **The top 10 agents with the highest cancellation ratios at city hotels all have cancellation rates above 70%. Remarkably, the top 3 agents even exhibit a 100% cancellation rate**.
+- **Agent 9 has the highest number of reservations (31849) and ranks first in terms of total reservations**. This agent seems to bring in a significant amount of business to the City Hotel. **However, Agent 9 also has a relatively high cancellation rate (41.62%)**, which might be a concern for the hotel's revenue management. Despite bringing in a large number of reservations, a high cancellation rate can lead to revenue loss and operational inefficiencies.
+- Agents with lower rankings in terms of total reservations might still contribute positively to the hotel's revenue if they have lower cancellation rates. For example, **Agent 28 ranks sixth in terms of total reservations but has a relatively low cancellation rate (6.71%), indicating a more stable and reliable booking pattern**.
+- Among the top 10 agents with the highest total reservations at city hotels, **agents 1 and 19** also rank in the top 10 agents with the highest cancellation rates.
 
 <br>
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/top3%20mvp.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/agent2.png"> </kbd> <br>
 </p>
 
-**Key Points (as of March 2024):**
-- Nikola Jokić, with the highest PER, WS, and BPM, likely contributes significantly to the model predicting him as the number one of the top 10 MVP frontrunners.
-- Shai Gilgeous-Alexander (2nd) and Giannis Antetokounmpo (3rd) still have a chance to move up in the MVP ranking ladder based on their actual basic stats, advanced stats, team standings, and vote share prediction.
-- Luka Dončić leads in PTS per game (34.1) this season, with a considerable gap to the second highest, Shai Gilgeous-Alexander (30.9). This contributes to Dončić being in 4th place currently, despite his team's poor standings.
+**Key Points:**
+- The top 10 agents with the highest cancellation ratios at city hotels all have cancellation rates in range 40% - 80%.
+- **Agent 240 leads in total reservations with a substantial count of 13778, securing the top rank in this category.** This agent significantly contributes to the Resort Hotel's bookings. **Despite Agent 240's high volume of reservations, their cancellation rate is noteworthy**, indicating potential revenue volatility. Effective management strategies are necessary to mitigate revenue risks associated with high cancellation rates.
+- Other agents, such as **Agent 250; 241; and 40, also exhibit substantial reservation counts but maintain relatively lower cancellation rates**. These agents represent opportunities for stable revenue streams with fewer cancellations.
+- **Agents 240 and 96**, who are among the top 10 agents with the highest total reservations at resort hotels, also find themselves among the top 10 agents with the highest cancellation rates.
 
 <br>
 
-### Model Interpretation
+## 📌 **Conclusion & Business Insight**
+
+In this comprehensive analysis of hotel performance and reservation dynamics in Denpasar, Indonesia, we have uncovered valuable insights that shed light on the intricacies of the hospitality industry. Here are the key takeaways from our findings:
+
+---
+1. `Demand Disparity between City and Resort Hotels:`
+   - City hotels emerge as the preferred choice among guests, boasting higher reservation percentages and average daily rates (ADR) compared to resort hotels.
+   - The higher demand for city accommodations underscores the need for resort hotels to refine their marketing strategies to attract more guests and increase their reservation percentages.
+---  
+2. `Seasonal Booking Trends and Revenue Optimization:`
+   - Both city and resort hotels experience fluctuations in booking counts throughout the year, with peaks coinciding with holiday seasons for locals and summer months for tourists.
+   - City hotels witness significant booking surges during peak seasons, while resort hotels maintain relatively consistent booking counts year-round.
+   - Effective pricing and marketing strategies tailored to seasonal variations can help city hotels maintain consistent booking counts during off-peak months, while resort hotels can capitalize on peak seasons with attractive packages and promotions.
+---
+3. `Cancellation Rate Dynamics and Revenue Management:`
+   - City hotels exhibit higher cancellation rates compared to resort hotels across all months and lead time groups.
+   - Shorter stay durations generally correspond to lower cancellation rates for both hotel types, highlighting the importance of optimizing room allocation management.
+   - Direct bookings demonstrate the lowest cancellation rates, emphasizing the need for hotels to incentivize guests to book directly through their channels to minimize revenue loss from cancellations.
+---
+4. `Impact of Distribution Channels on Cancellation Rates:`
+   - Travel agents/tour operators (TA/TO) emerge as the dominant distribution channel for both city and resort hotels, accounting for the highest number of reservations and cancellations.
+   - While TA/TO channels bring significant business, they also contribute to higher cancellation rates, necessitating collaborative efforts between hotels and agents to minimize cancellations and optimize revenue.
+---
+5. `Agent Performance Analysis and Revenue Risk Management:`
+   - Certain agents exhibit exceptionally high cancellation rates, posing revenue volatility risks despite their substantial contribution to total reservations.
+   - Effective revenue risk management strategies are crucial to mitigate the impact of high cancellation rates, particularly for agents with significant reservation volumes.
+---
+In conclusion, our analysis underscores the importance of understanding booking dynamics, cancellation patterns, and the role of distribution channels in optimizing revenue and enhancing guest satisfaction in the competitive hospitality landscape of Denpasar. By leveraging these insights, hotels can implement targeted strategies to maximize revenue potential, mitigate risks, and elevate the overall guest experience.
+
+<br>
+
+## 📌 **Dashboard**
+
+[View Dashboard in Tableau Public](https://public.tableau.com/views/HotelReservationandCancelation/Dashboard1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)
+
+To enhance our understanding and analysis of hotel performance and reservation cancellations, we can utilize this dashboard to highlight key performance indicators (KPIs) or metrics of interest. The dashboard comprises two pages: one focusing on hotel performance and the other on reservation cancellations. Each page provides an overview and detailed insights into the hotel data used in the notebook analysis.
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/shap%20value.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/dashboard1.png"> </kbd> <br>
 </p>
-
-The feature with the highest impact on the XGBoost model prediction is `adj_W%`, which represents the team's winning percentage adjusted by the total basic stats of the player. The impact gap from this feature to the next feature is considerable. Following closely are the next two impactful features for the model: `Total_AdvStat`, representing the total advanced stats for the player, and adjusted `BPM`, which indicates the Box Plus/Minus of the player.
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/shap%20bee.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/dashboard2.png"> </kbd> <br>
 </p>
-
-From the beeswarm plot, we can discern in greater detail the influence of each feature in this model. The plot vividly illustrates the wide range of impact from the `adj_W` feature. Additionally, it's apparent that features with high-value records exert the most influence on the model's predictions. Conversely, most low-value records result in zero impact across all features, except for `AST`, `Age`, and `Year`.
