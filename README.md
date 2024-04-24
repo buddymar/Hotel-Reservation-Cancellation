@@ -59,76 +59,55 @@ By dissecting the nuances of hotel performance and reservation dynamics, this an
 
 ## 📌 **Source Data**
 
+For this analysis, the data stored in MySQL databases will be utilized. The data, records, and information required for the analysis will be extracted from `hotel_notebook` database using SQL queries.
+
 <p align="center">
-    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/BRef.jpg"> </kbd> <br>
+    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/Database%20Diagram.png"> </kbd> <br>
 </p>
-
-The data utilized in this analysis and predictive modeling will be sourced from a website that hosts various basketball databases, [basketball-reference.com](https://www.basketball-reference.com/). The following data will be scraped, including:
-- **MVP voting results:** Distribution of votes among players who received at least one vote each season.
-- **Players basic stats:** All stats typically recorded in the official box score, aggregated per game for counting stats and per year for percentage stats.
-- **Players advanced stats:** Analytical stats formulated and calculated using basic stats.
-- **Team stats:** Stats concerning team performance and record for each season.
-
-All this data is scraped for the period from 2001 to present.
 
 <br>
 
 ## 📌 **Data Integration**
 
-In this section, all datasets will be merged into a single dataset for analysis and prediction. Before proceeding, we will conduct feature selection to eliminate columns that are unnecessary, redundant, or contain similar information to columns that will be used in the analysis.
+We will use SQL joins to create a new dataset by incorporating new data from all other tables into the `hotel_dataset` table.
+
+<p align="center">
+    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/joins.png"> </kbd> <br>
+</p>
 
 <br>
 
 ## 📌 **Data Preprocessing**
 
-The data cleaning section will involve various processes such as correcting errors, adjusting data types, handling missing values, managing duplicates, and so on. In the data transformation section, various processes will be performed, including adding new columns or features, handling outliers, encoding variables, correcting errors, and creating and transforming new columns.
-
-<br>
-
-### Data Type
-
-All columns in this table are currently of string data type. Columns such as `Year`, `Age`, `G`, and other basketball stats should be converted to numeric format.
-
-<br>
-
 ### Missing Values
 
-We have identified three categories for the columns with missing values:
-- `Vote_Share`: All missing values in this feature indicate that the players did not receive any MVP votes.
-- **Team Stats**: Columns related to team stats have consistent missing values across them, indicating a common factor for these missing values.
-- **Player Stats**: Several columns related to player stats, particularly shooting percentages, contain missing values.
+Before begin the analysis, we need to ensure that all missing values are addressed. We'll start by identifying all features with missing values and then handle them using the most appropriate method.
+
+Table 1 — Missing Values
+ **Column** | **Total Missing Values** | **Handling Missing Values**
+-----------------|--------------|--------------|
+company | 112593 | The missing values in the `company` feature will be filled with **0**, as these values indicate that the distribution channel for this particular guest is not a company.
+agent | 16340 | The missing values in the `agent` feature will also be filled with **0**, for the same reason as above.
+city | 488 | For the `children` feature, missing values will be filled with **0**, as this indicates that the guest did not bring any children with them.
+children | 4 | The missing values in the `city` feature will be filled with **unknown,** as there is no other method available to determine the guest's city of origin.
 
 <br>
 
-### Duplicated Values
+### Data Anomaly
 
-The dataset contains 0 duplicated records.
+In this section, we will filter out abnormal data from the dataset related to hotel reservations. This process ensures that the analysis relies on valid and reliable information.
 
-<br>
+### 1. Reservation Without Guests
 
-### Correcting Errors & Inconsistencies
+<p align="center">
+    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/anomaly1.png"> </kbd> <br>
+</p>
 
-In the dataset, there are 17 unique values for `Position` column. In basketball, especially the NBA, there are five primary positions used: PG, SG, SF, PF, and C. Therefore, there may be potential errors or inconsistencies here. 
+### 2. Reservation With a Stay Duration of Zero Days
 
-There are quite a lot of players recorded as having multiple positions. In reality, there should be many more players recorded as having multiple positions, especially in this *position-less* era in the NBA. However, to make our data and analysis more consistent, we will use the first position recorded in the dataset.
-
-<br>
-
-### Creating New Columns
-
-These are another set of columns or features created to assist in analyzing and predicting an MVP in the NBA.
-
-Table 1 — Feature Engineering
- **New Feature** | **Explanation** |
------------------|--------------|
-MVP_rank | MVP ranking of each player for each year  
-Overall_Standings | Overall standing of a team in each year
-Conf_Standings | Conference standing of a team in each year
-Stats_zscore | New features by transforming and standardizing all statistics within each year
-prior_mvp_winner | Have you won an MVP before?
-last_season_mvp | Did you win the MVP last year?
-last_two_season_mvp | Did you win the last two MVPs?
-total_mvp_currently | How many MVPs have you won before the current season?
+<p align="center">
+    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/assets/anomaly2.png"> </kbd> <br>
+</p>
 
 <br>
 
