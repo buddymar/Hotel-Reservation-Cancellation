@@ -36,18 +36,28 @@
 ## 📌 **Introduction**
 
 <p align="center">
-    <kbd> <img width="1000" alt="mvp banner" src="https://raw.githubusercontent.com/kudou88/NBA-MVP-Predictions/main/nba_mvp_banner.jpg"> </kbd> <br>
+    <kbd> <img width="1000" alt="mvp banner" src="https://raw.githubusercontent.com/buddymar/Hotel-Reservation-Cancellation/main/hotel2.bmp"> </kbd> <br>
 </p>
 
-In the exhilarating world of professional basketball, the race for the NBA Most Valuable Player (MVP) award stands as a pinnacle of individual excellence and team leadership. Every season, NBA fans eagerly anticipate the unveiling of the MVP, an accolade bestowed upon the player deemed most instrumental to their team's success and exhibiting exceptional performance on the court.
+The hospitality industry, particularly in destinations like Denpasar, Indonesia, where both City Hotels and Resort Hotels flourish, presents a dynamic landscape for analysis. In this comprehensive analysis, we delve into a meticulous examination of hotel performance and reservation cancellation patterns within these two distinct hotel categories.
 
-The MVP selection process entails a comprehensive evaluation by a panel of sportswriters and broadcasters, who cast their votes based on a multitude of factors, including individual player statistics, team performance, impact on game outcomes, and intangible qualities such as leadership and sportsmanship. With the MVP race often culminating in heated debates and impassioned discussions among basketball enthusiasts, unraveling the underlying metrics that sway voters' decisions has become a compelling endeavor.
+Our analysis embarks on a journey to unravel the intricate dynamics of hotel performance and reservation cancellations, shedding light on critical facets that influence operational efficacy and guest satisfaction. Through meticulous data examination, we aim to discern the underlying trends, challenges, and opportunities inherent in the operations of these hotel types, fostering actionable insights for stakeholders within the hospitality industry. In this report, we will focus on:
 
-In this report, we undertake an in-depth exploration of the NBA MVP selection process. Utilizing a meticulously curated dataset obtained through web scraping, we delve into the intricate interplay of player attributes, fundamental and advanced statistical metrics, and team dynamics. Our objective is to unravel the complexities surrounding MVP success by scrutinizing the statistical profiles of past MVP recipients and dissecting the subtle intricacies of team performance. Through rigorous analysis, we endeavor to discern the pivotal factors that sway voters' decisions and forecast the leading contenders for the prestigious MVP accolade.
+**Hotel Performance Analysis:**
+- Exploration of booking composition, providing insights into the distribution of reservations between City Hotels and Resort Hotels.
+- Examination of monthly booking patterns and Average Daily Rate (ADR) fluctuations to discern seasonal trends and pricing dynamics.
+- Evaluation of key performance metrics to gauge the operational efficiency and revenue-generating capabilities of each hotel type.
+
+**Reservation Cancellation Investigation:**
+- In-depth analysis of factors contributing to reservation cancellations, including guest behavior, external influences, and operational inefficiencies.
+- Identification of critical aspects impacting cancellation rates and their implications for revenue management and guest satisfaction.
+- Formulation of actionable strategies and recommendations to mitigate reservation cancellations and optimize hotel revenue streams.
+
+By dissecting the nuances of hotel performance and reservation dynamics, this analysis endeavors to equip industry stakeholders with actionable insights to enhance operational efficiency, maximize revenue potential, and elevate the guest experience in Denpasar's diverse hospitality landscape.
 
 <br>
 
-## 📌 **Data Scraping**
+## 📌 **Source Data**
 
 <p align="center">
     <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/BRef.jpg"> </kbd> <br>
