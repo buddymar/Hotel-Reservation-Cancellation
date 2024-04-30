@@ -1,7 +1,7 @@
 # 🏨 Unveiling Hotel Performance: An In-Depth Analysis of Reservation Cancellations
 <br>
 
-**Platform**: Jupyter Notebook | [Notebook via nbviewer](https://nbviewer.org/github/buddymar/Hotel-Reservation-Cancellation/blob/main/Hotel%20Reservation%20Cancellation.ipynb) | [Notebook via Github](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/Hotel%20Reservation%20Cancellation.ipynb)<br>
+**Platform**: Jupyter Notebook | [View Notebook on nbviewer](https://nbviewer.org/github/buddymar/Hotel-Reservation-Cancellation/blob/main/Hotel%20Reservation%20Cancellation.ipynb) | [View Notebook on Github](https://github.com/buddymar/Hotel-Reservation-Cancellation/blob/main/Hotel%20Reservation%20Cancellation.ipynb)<br>
 **Programming Language**: Python <br>
 **Libraries**: Pandas, NumPy, Matplotlib, Seaborn <br>
 **Database**: MySQL <br>
